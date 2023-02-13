@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="resume.css" />
+    </head>
+    <body>
+        <nav class="top-bar">
+            <h1>KADU</h1>
+            <span onclick="toggleMenu(this)" id="menu" class="menu-icon"><i class="fa-solid fa-bars fa-2xl"></i></span>
+        </nav>
+        <div class="background-modal" onclick="closeMenu()">
+            <aside class="menu-modal">
+                <span onclick="toggleMenu(this)" id="close" class="close-icon"><i class="fa-solid fa-xmark fa-2xl"></i></span>
+                <nav class="menu-nav">
+                    <a href="#about" onclick="closeMenu()" class="menu-nav-item"><span>01.</span>About Me</a>
+                    <a href="#experiences" onclick="closeMenu()" class="menu-nav-item"><span>02.</span>Experience</a>
+                    <a href="#projects" onclick="closeMenu()" class="menu-nav-item"><span>03.</span>Projects</a>
+                    <a href="#contact" onclick="closeMenu()" class="menu-nav-item"><span>04.</span>Contact</a>
+                    <a href="#diproj" onclick="toggleDiproj()" class="menu-nav-item"><span>05.</span>In memory</a>
+                    <button class="btn btn-resume">Resume</button>
+                </nav>
+            </aside>
+        </div>
+        <div class="social-links-widget">
+            <span class="link-box">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+            <span class="link-box">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="link-box">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+        </div>
+        <main class="container">
+            <section class="home content">
+                <h3 class="bf-name">Hey, my name is</h3>
+                <h1 class="name">Carlos Eduardo.</h1>
+                <h2 class="af-name">I build things for the web.</h2>
+                <p class="home-desc">
+                    I'm a software engineer focused in fullstack web development
+                    and a lot of interest in artificial inteligence
+                </p>
+                <button class="btn btn-about">Know more about me</button>
+            </section>
+            <section id="about" class="about content">
+                <header class="content-header">
+                    <h1 class="header-title"><span>01.</span>About Me</h1>
+                    <div class="hori-line"></div>
+                </header>
+                <p class="content-text">
+                    As an ambitious software engineering student at the
+                    University of Brasília, I am eager to apply my passion for
+                    technology and development to a professional setting.
+                    Through interning at Agencia Espacial Brasileira and
+                    participating in
+                    <a href="https://orcestra.com.br/" target="_blank"
+                        >Orc'estra Gamificação</a
+                    >, a software junior company, I have gained hands-on
+                    experience in web development, honed my skills and developed
+                    a strong sense of organization and focus. I am always
+                    seeking to continue growing and make a meaningful impact.
+                    With my skill-set, drive and ability to stay focused and
+                    organized, I am confident that I will excel in a developer
+                    role, and make valuable contributions.
+                </p>
+                <p class="content-text">
+                    Some technologies i have been working with:
+                </p>
+                <div class="tec-list">
+                    <span class="tec-list-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        Node.js
+                    </span>
+                    <span class="tec-list-item">
+                        <i class="fa-brands fa-react"></i>
+                        React.js
+                    </span>
+                    <span class="tec-list-item">
+                        <i class="fa-solid fa-database"></i>
+                        Postgresql
+                    </span>
+                    <span class="tec-list-item">
+                        <i class="fa-brands fa-docker"></i>
+                        Docker
+                    </span>
+                    <span class="tec-list-item">
+                        <i class="fa-brands fa-square-js"></i>
+                        Javascript
+                    </span>
+                    <span class="tec-list-item">
+                        <i class="fa-brands fa-java"></i>
+                        Java
+                    </span>
+                </div>
+                <img src="./assets/eu.jpeg" alt="" class="photo" />
+            </section>
+            <section id="experiences" class="experiences content">
+                <header class="content-header">
+                    <h1 class="header-title">
+                        <span>02.</span>Where I've Worked
+                    </h1>
+                    <div class="hori-line"></div>
+                </header>
+
+                <div class="exp-content">
+                    <div class="exp-list">
+                        <button
+                            id="exp-orc"
+                            class="exp-list-item exp-list-item-active"
+                            onclick="toggleExp(this)"
+                        >
+                            Orc'estra
+                        </button>
+                        <button
+                            id="exp-aeb"
+                            class="exp-list-item"
+                            onclick="toggleExp(this)"
+                        >
+                            AEB
+                        </button>
+                    </div>
+                    <div class="exp-desc">
+                        <div id="exp-orc-desc" class="exp-desc-item">
+                            <h3 class="exp-desc-item-title">
+                                <span>Projects Advisor</span>
+                                <a
+                                    href="https://orcestra.com.br/"
+                                    target="_blank"
+                                    class="company"
+                                >
+                                    @ Orc'estra
+                                </a>
+                            </h3>
+                            <p class="range">April 2022 - Present</p>
+                            <div>
+                                <ul class="job-desc-list">
+                                    <li class="job-desc-item">
+                                        Documentation and Lorem ipsum, dolor sit
+                                        amet consectetur adipisicing elit. Culpa
+                                        nobis cum praesentium! Rerum architecto
+                                        excepturi voluptas dolore tenetur atque
+                                        nihil.
+                                    </li>
+                                    <li class="job-desc-item">
+                                        Gamification and Lorem ipsum, dolor sit
+                                        amet consectetur adipisicing elit. Ipsa
+                                        enim, sunt saepe recusandae consectetur
+                                        suscipit! Adipisci et magnam deleniti
+                                        delectus suscipit accusamus veniam.
+                                    </li>
+                                    <li class="job-desc-item">
+                                        Developmento and Lorem ipsum, dolor sit
+                                        amet consectetur adipisicing elit.
+                                        Voluptas dolorum ratione eaque inventore
+                                        ullam illum voluptates necessitatibus
+                                        temporibus voluptatibus repellat?
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="exp-aeb-desc" class="exp-desc-item">
+                            <h3 class="exp-desc-item-title">
+                                <span>Dev Intern</span>
+                                <a
+                                    href="https://www.gov.br/aeb/pt-br"
+                                    target="_blank"
+                                    class="company"
+                                >
+                                    @ Agência Espacial Brasileira
+                                </a>
+                            </h3>
+                            <p class="range">October 2022 - Present</p>
+                            <div>
+                                <ul class="job-desc-list">
+                                    <li class="job-desc-item">
+                                        Documentation and Lorem ipsum, dolor sit
+                                        amet consectetur adipisicing elit. Culpa
+                                        nobis cum praesentium! Rerum architecto
+                                        excepturi voluptas dolore tenetur atque
+                                        nihil.
+                                    </li>
+                                    <li class="job-desc-item">
+                                        Gamification and Lorem ipsum, dolor sit
+                                        amet consectetur adipisicing elit. Ipsa
+                                        enim, sunt saepe recusandae consectetur
+                                        suscipit! Adipisci et magnam deleniti
+                                        delectus suscipit accusamus veniam.
+                                    </li>
+                                    <li class="job-desc-item">
+                                        Developmento and Lorem ipsum, dolor sit
+                                        amet consectetur adipisicing elit.
+                                        Voluptas dolorum ratione eaque inventore
+                                        ullam illum voluptates necessitatibus
+                                        temporibus voluptatibus repellat?
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="projects content">
+                <header class="content-header">
+                    <h1 class="header-title"><span>03.</span>Projects</h1>
+                    <div class="hori-line"></div>
+                </header>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">Schedula</h3>
+                        <p class="project-desc">
+                            I had the opportunity to participate in the
+                            development of schedula, a project developed for the
+                            civil police of Goiás in partnership with UnB, with
+                            which I learned a lot about various aspects of
+                            software development
+                        </p>
+                        <ul class="project-tecs">
+                            <li>Typescript</li>
+                            <li>Nest.js</li>
+                            <li>React.js</li>
+                            <li>Node</li>
+                            <li>Postgres</li>
+                            <li>Docker</li>
+                            <li>Jest</li>
+                        </ul>
+                        <a
+                            href="https://github.com/fga-eps-mds/2022-2-Schedula-Doc"
+                            target="_blank"
+                            class="project-link"
+                        >
+                            <i class="fa-brands fa-github fa-xl"></i>
+                        </a>
+                    </div>
+                    <div class="project-item">
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">Schedula</h3>
+                        <p class="project-desc">
+                            I had the opportunity to participate in the
+                            development of schedula, a project developed for the
+                            civil police of Goiás in partnership with UnB, with
+                            which I learned a lot about various aspects of
+                            software development
+                        </p>
+                        <ul class="project-tecs">
+                            <li>Typescript</li>
+                            <li>Nest.js</li>
+                            <li>React.js</li>
+                            <li>Node</li>
+                            <li>Postgres</li>
+                            <li>Docker</li>
+                            <li>Jest</li>
+                        </ul>
+                        <a
+                            href="https://github.com/fga-eps-mds/2022-2-Schedula-Doc"
+                            target="_blank"
+                            class="project-link"
+                        >
+                            <i class="fa-brands fa-github fa-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="contact content">
+                <header class="content-header">
+                    <h1 class="header-title"><span>04.</span>Get in Touch</h1>
+                    <div class="hori-line"></div>
+                </header>
+                <div class="contact-desc">
+                    <p>Although I'm not currently looking for any new opportunities, 
+                        my inbox is always open. Whether you have a question or just want to say hi, 
+                        I'll try my best to get back to you!</p>
+                    <button class="btn btn-email">Say Hello</button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="social-links">
+                <span class="link-box">
+                    <a href="https://www.linkedin.com/in/carlos-e-souza2653/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+                </span>
+                <span class="link-box">
+                    <a href="https://github.com/Carlos-E-Souza" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+                </span>
+                <span class="link-box">
+                    <a href="carlos.e.souza2653@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a></i>
+                </span>
+            </div>
+            <div class="footer-msg">
+                Built By Carlos-E-Souza
+            </div>
+        </footer>
+        <div id="diproj">
+            <h2>In memory of diproj 2022...</h2>
+            <img src="./assets/diproj.jpg" class="diproj-photo" alt="">
+        </div>
+        <script src="./resume.js"></script>
+    </body>
+</html>
