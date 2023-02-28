@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .top-bar {
-    width: 100%;
+    width: -webkit-fill-available;
     height: 8vh;
     position: fixed;
     background: #06192e;
@@ -74,6 +74,10 @@ body::-webkit-scrollbar-thumb {
     color: #3efedd;
 }
 
+.nav-menu {
+    display: none;
+}
+
 .menu-nav {
     width: -webkit-fill-available;
     display: flex;
@@ -121,7 +125,7 @@ body::-webkit-scrollbar-thumb {
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     min-height: 90vh;
     height: auto;
@@ -129,25 +133,25 @@ body::-webkit-scrollbar-thumb {
 
 .bf-name {
     color: #3efedd;
-    font-size: 15px;
+    font-size: 2.5vmax;
     width: 100%;
 }
 
 .name {
     color: #cad7f5;
-    font-size: 40px;
+    font-size: 6vmax;
     margin: 0;
 }
 
 .af-name {
     color: #8793ae;
-    font-size: 36px;
+    font-size: 6vmax;
     margin: 10px 0;
 }
 
 .home-desc {
     color: #8793ae;
-    font-size: 20px;
+    font-size: 3vmax;
 }
 
 .btn {
@@ -160,9 +164,14 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
+.about {
+    align-items: center;
+}
+
 .btn-about {
-    width: 100%;
+    width: -webkit-fill-available;
     margin-top: 15%;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -172,7 +181,7 @@ body::-webkit-scrollbar-thumb {
 .content-header {
     width: -webkit-fill-available;
     display: flex;
-    font-size: 15px;
+    font-size: 2.2vmax;
     align-items: center;
 }
 
@@ -188,7 +197,7 @@ body::-webkit-scrollbar-thumb {
 
 .content-text {
     color: #8793ae;
-    font-size: 16px;
+    font-size: 2vmax;
 }
 
 .content-text a {
@@ -219,6 +228,7 @@ body::-webkit-scrollbar-thumb {
     color: #8793ae;
     margin: 3%;
     cursor: default;
+    font-size: 1.6vmax;
 }
 
 .tec-list-item i {
@@ -257,6 +267,7 @@ body::-webkit-scrollbar-thumb {
     color: #8793ae;
     border: 0;
     border-bottom: 1px solid #8793ae;
+    font-size: 1.5vmax;
 }
 
 .exp-list-item:hover,
@@ -284,7 +295,7 @@ body::-webkit-scrollbar-thumb {
 
 .exp-desc-item-title {
     margin-bottom: 2px;
-    font-size: 18px;
+    font-size: 2.5vmax;
     color: #cad7f5;
 }
 
@@ -312,7 +323,7 @@ body::-webkit-scrollbar-thumb {
 
 .range {
     color: #8793ae;
-    font-size: 14px;
+    font-size: 1.4vmax;
     margin: 0;
 }
 
@@ -326,6 +337,7 @@ body::-webkit-scrollbar-thumb {
     color: #8793ae;
     padding-left: 10%;
     margin-bottom: 10px;
+    font-size: 2.2vmax;
 }
 
 .job-desc-item::before {
@@ -397,7 +409,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact {
-    padding: 20% 0;
+    padding: 20% 0 0;
     min-height: 70vh;
 }
 
@@ -445,24 +457,162 @@ body::-webkit-scrollbar-thumb {
     color: #8793ae;
 }
 
-#diproj {
-    width: -webkit-fill-available;
-    display: none;
-    align-items: center;
-    justify-content: center;
+.social-links span a {
+    color: #8793ae;
 }
 
-#diproj h2 {
-    color: #cad7f5;
-    font-size: 20px;
-}
+@media screen and (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10%;
+    }
 
-.diproj-photo {
-    width: -webkit-fill-available;
-}
+    .menu-icon {
+        display: none;
+    }
 
-@media screen and (min-width: 400px) {
-    .social-links {
+    .top-bar {
+        padding: 14px 12px 12px 25px;
+    }
+
+    .nav-menu {
+        display: flex;
+        width: max-content;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    .menu-nav-item {
+        margin: 0;
+    }
+
+    .menu-nav-item span {
+        margin-right: 5px;
+    }
+
+    .social-links-widget {
+        position: fixed;
+        bottom: 0;
+        left: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .link-box {
+        color: #8793ae;
+        margin: 70% 0;
+    }
+
+    .link-box:hover {
         color: #3efedd;
+    }
+
+    .line {
+        color: #8793ae;
+        background-color: #8793ae;
+        width: 2px;
+        height: 20vh;
+        border-radius: 5px;
+        border: 1px solid #8793ae;
+    }
+
+    .email-widget {
+        position: fixed;
+        bottom: 0;
+        right: -7%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email-link {
+        rotate: 90deg;
+        color: #8793ae;
+        text-decoration: none;
+        margin-bottom: 55%;
+    }
+
+    .email-link:hover {
+        color: #3efedd;
+    }
+
+    .home {
+        margin-top: 5%;
+    }
+
+    .btn-about {
+        width: auto;
+        margin-top: 5%;
+    }
+
+    .about {
+        align-items: flex-start;
+    }
+
+    .home-desc,
+    .content-header,
+    .content-text,
+    .tec-list {
+        width: 50%;
+    }
+
+    .home-desc {
+        font-size: 2vmax;
+    }
+
+    .content-text {
+        font-size: 1.6vmax;
+    }
+
+    .photo {
+        position: absolute;
+        margin-top: 10%;
+        width: 30%;
+        right: 15%;
+    }
+
+    .experiences,
+    .projects {
+        width: 60%;
+        align-self: center;
+        margin-top: 10%;
+    }
+
+    .experiences .content-header,
+    .projects .content-header,
+    .contact .content-header {
+        width: -webkit-fill-available;
+    }
+
+    .job-desc-item,
+    .exp-list-item {
+        font-size: 1.6vmax;
+    }
+
+    .exp-desc-item-title {
+        font-size: 1.8vmax;
+    }
+
+    .contact {
+        width: 60%;
+        align-self: center;
+    }
+
+    .footer {
+        padding: 0;
+    }
+
+    .social-links {
+        width: max-content;
+        margin-bottom: 2%;
+        gap: 50px;
+    }
+
+    .bf-name {
+        font-size: 1.8vmax;
     }
 }

@@ -14,6 +14,12 @@
     <body>
         <nav class="top-bar">
             <h1>KADU</h1>
+            <div class="nav-menu">
+                <a href="#about" class="menu-nav-item"><span>01.</span>About Me</a>
+                <a href="#experiences" class="menu-nav-item"><span>02.</span>Experience</a>
+                <a href="#projects" class="menu-nav-item"><span>03.</span>Projects</a>
+                <a href="#contact" class="menu-nav-item"><span>04.</span>Contact</a>
+            </div>
             <span onclick="toggleMenu(this)" id="menu" class="menu-icon"><i class="fa-solid fa-bars fa-2xl"></i></span>
         </nav>
         <div class="background-modal" onclick="closeMenu()">
@@ -24,21 +30,25 @@
                     <a href="#experiences" onclick="closeMenu()" class="menu-nav-item"><span>02.</span>Experience</a>
                     <a href="#projects" onclick="closeMenu()" class="menu-nav-item"><span>03.</span>Projects</a>
                     <a href="#contact" onclick="closeMenu()" class="menu-nav-item"><span>04.</span>Contact</a>
-                    <a href="#diproj" onclick="toggleDiproj()" class="menu-nav-item"><span>05.</span>In memory</a>
                     <button class="btn btn-resume">Resume</button>
                 </nav>
             </aside>
         </div>
         <div class="social-links-widget">
-            <span class="link-box">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </span>
-            <span class="link-box">
-                <i class="fa-brands fa-github"></i>
-            </span>
-            <span class="link-box">
-                <i class="fa-solid fa-envelope"></i>
-            </span>
+            <a href="https://www.linkedin.com/in/carlos-e-souza2653/" class="link-box">
+                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/carlos-e-souza2653/" class="link-box">
+                <i class="fa-brands fa-github fa-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/carlos-e-souza2653/" class="link-box">
+                <i class="fa-solid fa-envelope fa-lg"></i>
+            </a>
+            <span class="line"></span>
+        </div>
+        <div class="email-widget">
+            <a href="mailto:carlos.e.souza2653@gmail.com" class="email-link">carlos.e.souza2653@gmail.com</a>
+            <span class="line"></span>
         </div>
         <main class="container">
             <section class="home content">
@@ -49,7 +59,7 @@
                     I'm a software engineer focused in fullstack web development
                     and a lot of interest in artificial inteligence
                 </p>
-                <button class="btn btn-about">Know more about me</button>
+                <a href="https://www.linkedin.com/in/carlos-e-souza2653/" target="_blank" class="btn btn-about">Know more about me</a>
             </section>
             <section id="about" class="about content">
                 <header class="content-header">
@@ -101,7 +111,7 @@
                         Java
                     </span>
                 </div>
-                <img src="./assets/eu.jpeg" alt="" class="photo" />
+                <img src="./public/eu.jpeg" alt="" class="photo" />
             </section>
             <section id="experiences" class="experiences content">
                 <header class="content-header">
@@ -285,13 +295,13 @@
         </main>
         <footer class="footer">
             <div class="social-links">
-                <span class="link-box">
+                <span>
                     <a href="https://www.linkedin.com/in/carlos-e-souza2653/" target="_blank"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
                 </span>
-                <span class="link-box">
+                <span>
                     <a href="https://github.com/Carlos-E-Souza" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                 </span>
-                <span class="link-box">
+                <span>
                     <a href="carlos.e.souza2653@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a></i>
                 </span>
             </div>
@@ -299,10 +309,6 @@
                 Built By Carlos-E-Souza
             </div>
         </footer>
-        <div id="diproj">
-            <h2>In memory of diproj 2022...</h2>
-            <img src="./assets/diproj.jpg" class="diproj-photo" alt="">
-        </div>
         <script src="./resume.js"></script>
     </body>
 </html>
