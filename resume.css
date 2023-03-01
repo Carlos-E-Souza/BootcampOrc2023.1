@@ -368,18 +368,18 @@ body::-webkit-scrollbar-thumb {
 .project-overline {
     color: #3efedd;
     margin: 10px 0;
-    font-size: 15px;
+    font-size: 1.4vmax;
 }
 
 .project-title {
     color: #cad7f5;
-    font-size: 26px;
+    font-size: 2.6vmax;
     margin: 0;
 }
 
 .project-desc {
     color: #8793ae;
-    font-size: 16px;
+    font-size: 1.4vmax;
     padding: 20px 0;
 }
 
@@ -395,7 +395,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .project-tecs li {
-    font-size: 14px;
+    font-size: 1.2vmax;
     color: #8793ae;
     margin: 0 10px 5px 0;
 }
@@ -523,14 +523,14 @@ body::-webkit-scrollbar-thumb {
     .email-widget {
         position: fixed;
         bottom: 0;
-        right: -7%;
+        right: -3%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .email-link {
-        rotate: 90deg;
+        transform: rotate(90deg);
         color: #8793ae;
         text-decoration: none;
         margin-bottom: 55%;
